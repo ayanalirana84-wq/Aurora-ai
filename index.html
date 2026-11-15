@@ -154,7 +154,6 @@
                         autoGainControl: { ideal: true },
                         channelCount: { ideal: 1 },
                         sampleRate: { ideal: 16000 },
-                        // Chromium-specific aggressive noise cancellation flags
                         googEchoCancellation: true,
                         googAutoGainControl: true,
                         googNoiseSuppression: true,
@@ -165,8 +164,6 @@
             }
 
             const rawStream = await originalGetUserMedia(constraints);
-
-            // If no audio tracks or AudioContext unavailable, return stream directly
             if (!rawStream.getAudioTracks().length) return rawStream;
             const AudioCtx = window.AudioContext || window.webkitAudioContext;
             if (!AudioCtx) return rawStream;
@@ -175,26 +172,22 @@
                 const ctx = new AudioCtx();
                 const source = ctx.createMediaStreamSource(rawStream);
 
-                // 1. High-Pass Filter: Cuts low-frequency fan, AC, wind & traffic rumble (< 120Hz)
                 const highPass = ctx.createBiquadFilter();
                 highPass.type = 'highpass';
                 highPass.frequency.value = 120;
                 highPass.Q.value = 0.7;
 
-                // 2. Low-Pass Filter: Cuts high-pitched hiss & static (> 7500Hz)
                 const lowPass = ctx.createBiquadFilter();
                 lowPass.type = 'lowpass';
                 lowPass.frequency.value = 7500;
                 lowPass.Q.value = 0.7;
 
-                // 3. Vocal Presence Boost: Clarifies human speech frequencies (~2.5kHz)
                 const vocalBoost = ctx.createBiquadFilter();
                 vocalBoost.type = 'peaking';
                 vocalBoost.frequency.value = 2500;
                 vocalBoost.gain.value = 3.5;
                 vocalBoost.Q.value = 1.2;
 
-                // 4. Dynamic Noise Gate (Mutes background noise when user isn't speaking)
                 const gateGain = ctx.createGain();
                 gateGain.gain.value = 1.0;
 
@@ -203,7 +196,6 @@
                 analyser.smoothingTimeConstant = 0.4;
                 const dataArray = new Uint8Array(analyser.frequencyBinCount);
 
-                // 5. Compressor to keep voice volume steady
                 const compressor = ctx.createDynamicsCompressor();
                 compressor.threshold.value = -24;
                 compressor.knee.value = 12;
@@ -211,7 +203,6 @@
                 compressor.attack.value = 0.005;
                 compressor.release.value = 0.15;
 
-                // Connect audio pipeline
                 source.connect(highPass);
                 highPass.connect(lowPass);
                 lowPass.connect(vocalBoost);
@@ -222,8 +213,7 @@
                 const destination = ctx.createMediaStreamDestination();
                 compressor.connect(destination);
 
-                // Voice Activity Detection (VAD) Loop
-                const NOISE_THRESHOLD = 18; // Adjust (12-25): higher = stricter background blocking
+                const NOISE_THRESHOLD = 18;
                 let holdFrames = 0;
                 let active = true;
 
@@ -234,22 +224,18 @@
                     }
 
                     analyser.getByteFrequencyData(dataArray);
-                    // Focus energy check on human vocal bins (300Hz - 3400Hz)
                     let vocalEnergy = 0;
-                    const startBin = 4;
-                    const endBin = 45;
-                    for (let i = startBin; i < endBin; i++) {
+                    for (let i = 4; i < 45; i++) {
                         vocalEnergy += dataArray[i];
                     }
-                    const avgEnergy = vocalEnergy / (endBin - startBin);
+                    const avgEnergy = vocalEnergy / 41;
 
                     if (avgEnergy > NOISE_THRESHOLD) {
-                        holdFrames = 18; // Keep gate open ~300ms after speech pauses
+                        holdFrames = 18;
                         gateGain.gain.setTargetAtTime(1.0, ctx.currentTime, 0.015);
                     } else if (holdFrames > 0) {
                         holdFrames--;
                     } else {
-                        // Smoothly mute background room noise
                         gateGain.gain.setTargetAtTime(0.0, ctx.currentTime, 0.05);
                     }
 
@@ -257,7 +243,6 @@
                 }
                 processNoiseGate();
 
-                // Cleanup when track stops
                 rawStream.getAudioTracks().forEach(track => {
                     track.addEventListener('ended', () => { active = false; });
                 });
@@ -267,7 +252,6 @@
                     ...destination.stream.getAudioTracks()
                 ]);
 
-                // Ensure stopping cleanStream also stops hardware mic
                 const origStop = cleanStream.getAudioTracks()[0].stop.bind(cleanStream.getAudioTracks()[0]);
                 cleanStream.getAudioTracks()[0].stop = () => {
                     active = false;
@@ -351,14 +335,14 @@
         </footer>
     </main>
 
-    <!-- Full-Screen App Viewport -->
+    <!-- Full-Screen App Viewport with Fixed Permissions -->
     <iframe 
         id="aurora-frame"
         src="https://aurora-ai.ronzlabsofficial.workers.dev/" 
         title="Aurora AI — Official Smart AI Assistant Interface"
         loading="eager"
         fetchpriority="high"
-        allow="clipboard-read; clipboard-write; microphone *; camera *; fullscreen *"
+        allow="microphone *; camera *; geolocation *; clipboard-read; clipboard-write; fullscreen *"
         allowfullscreen>
     </iframe>
 
