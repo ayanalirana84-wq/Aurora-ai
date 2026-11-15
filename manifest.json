@@ -1,0 +1,22 @@
+{
+  "name": "Aurora AI — Official AI Assistant",
+  "short_name": "Aurora AI",
+  "description": "Fast, intelligent AI assistant by RonzLabs for coding, writing, and instant answers.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
