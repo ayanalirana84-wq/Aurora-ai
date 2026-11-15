@@ -1,271 +1,17 @@
 <!DOCTYPE html>
-<html lang="en" prefix="og: https://ogp.me/ns#">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <!-- Primary SEO Meta Tags -->
+    
     <title>Aurora AI — RonzLabs</title>
-    <meta name="title" content="Aurora AI — Official Next-Gen AI Assistant & Chatbot | RonzLabs">
-    <meta name="description" content="Aurora AI by RonzLabs is a blazing-fast, free intelligent AI assistant for coding, content writing, debugging, research, and instant smart answers directly in your browser.">
-    <meta name="keywords" content="Aurora AI, Aurora AI Ronz, Aurora AI official, Aurora AI chatbot, Aurora AI RonzLabs, free AI assistant, AI coding assistant, online AI chat, smart AI tool, RonzLabs">
-    <meta name="author" content="RonzLabs">
-    <meta name="publisher" content="RonzLabs">
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <meta name="googlebot" content="index, follow">
+    <meta name="description" content="Aurora AI by RonzLabs is a blazing-fast, free intelligent AI assistant for coding, content writing, and debugging.">
     <meta name="theme-color" content="#000000">
     <meta name="color-scheme" content="dark">
-    <meta name="application-name" content="Aurora AI">
-    <meta name="apple-mobile-web-app-title" content="Aurora AI">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-    <!-- Canonical & Preconnect -->
     <link rel="canonical" href="https://aurora-ai-ronz.vercel.app/">
-    <link rel="preconnect" href="https://aurora-ai.ronzlabsofficial.workers.dev" crossorigin>
-    <link rel="dns-prefetch" href="https://aurora-ai.ronzlabsofficial.workers.dev">
-
-    <!-- PWA Manifest & Icons -->
-    <link rel="manifest" href="/manifest.json">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://aurora-ai-ronz.vercel.app/favicon.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="https://aurora-ai-ronz.vercel.app/favicon.png">
-    <link rel="apple-touch-icon" href="https://aurora-ai-ronz.vercel.app/favicon.png">
-
-    <!-- Open Graph / Facebook / WhatsApp / LinkedIn -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://aurora-ai-ronz.vercel.app/">
-    <meta property="og:title" content="Aurora AI — Official Smart AI Assistant by RonzLabs">
-    <meta property="og:description" content="Chat, code, debug, and create faster with Aurora AI. Experience next-generation artificial intelligence in a clean, ultra-fast interface.">
-    <meta property="og:image" content="https://aurora-ai-ronz.vercel.app/preview-banner.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Aurora AI Interface Preview by RonzLabs">
-    <meta property="og:site_name" content="Aurora AI">
-    <meta property="og:locale" content="en_US">
-
-    <!-- Twitter / X Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://aurora-ai-ronz.vercel.app/">
-    <meta name="twitter:title" content="Aurora AI — Official Smart AI Assistant by RonzLabs">
-    <meta name="twitter:description" content="Chat, code, debug, and create faster with Aurora AI. Your free next-gen AI assistant.">
-    <meta name="twitter:image" content="https://aurora-ai-ronz.vercel.app/preview-banner.png">
-
-    <!-- Advanced Structured Data (JSON-LD Knowledge Graph) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "WebSite",
-          "@id": "https://aurora-ai-ronz.vercel.app/#website",
-          "url": "https://aurora-ai-ronz.vercel.app/",
-          "name": "Aurora AI",
-          "alternateName": ["Aurora AI Ronz", "Aurora AI Official"],
-          "description": "Official web application for Aurora AI by RonzLabs.",
-          "publisher": { "@id": "https://aurora-ai-ronz.vercel.app/#organization" },
-          "inLanguage": "en-US"
-        },
-        {
-          "@type": "Organization",
-          "@id": "https://aurora-ai-ronz.vercel.app/#organization",
-          "name": "RonzLabs",
-          "url": "https://aurora-ai-ronz.vercel.app/",
-          "logo": { "@type": "ImageObject", "url": "https://aurora-ai-ronz.vercel.app/favicon.png" },
-          "email": "ronzlabsofficial@gmail.com"
-        },
-        {
-          "@type": "SoftwareApplication",
-          "@id": "https://aurora-ai-ronz.vercel.app/#app",
-          "name": "Aurora AI",
-          "alternateName": ["Aurora AI Assistant", "Aurora AI Chatbot", "Aurora AI by RonzLabs"],
-          "url": "https://aurora-ai-ronz.vercel.app/",
-          "applicationCategory": "AIApplication",
-          "applicationSubCategory": "Artificial Intelligence Assistant",
-          "operatingSystem": "Web, Android, iOS, Windows, macOS, Linux",
-          "browserRequirements": "Requires JavaScript. Requires HTML5.",
-          "softwareVersion": "2.0",
-          "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD",
-            "availability": "https://schema.org/InStock"
-          },
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.9",
-            "ratingCount": "1250",
-            "bestRating": "5",
-            "worstRating": "1"
-          },
-          "description": "Aurora AI is an advanced, ultra-fast AI chatbot and productivity assistant engineered by RonzLabs for coding, writing, and instant problem-solving.",
-          "creator": { "@id": "https://aurora-ai-ronz.vercel.app/#organization" }
-        },
-        {
-          "@type": "FAQPage",
-          "@id": "https://aurora-ai-ronz.vercel.app/#faq",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "What is Aurora AI?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Aurora AI is an intelligent, next-generation artificial intelligence assistant created by RonzLabs. It helps users write code, debug errors, draft content, brainstorm ideas, and get instant, accurate answers."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Is Aurora AI free to use online?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes, Aurora AI is completely accessible online via aurora-ai-ronz.vercel.app with zero installation required on mobile and desktop browsers."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Who developed Aurora AI?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Aurora AI is developed and maintained by RonzLabs, focusing on high-speed, modern web and AI applications."
-              }
-            }
-          ]
-        }
-      ]
-    }
-    </script>
-
-    <!-- Global Noise Suppression & Acoustic Filtering Engine -->
-    <script>
-    (function () {
-        if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) return;
-
-        const originalGetUserMedia = navigator.mediaDevices.getUserMedia.bind(navigator.mediaDevices);
-
-        navigator.mediaDevices.getUserMedia = async function (constraints) {
-            if (constraints && constraints.audio) {
-                const baseAudio = typeof constraints.audio === 'object' ? constraints.audio : {};
-                constraints = {
-                    ...constraints,
-                    audio: {
-                        ...baseAudio,
-                        echoCancellation: { ideal: true },
-                        noiseSuppression: { ideal: true },
-                        autoGainControl: { ideal: true },
-                        channelCount: { ideal: 1 },
-                        sampleRate: { ideal: 16000 },
-                        googEchoCancellation: true,
-                        googAutoGainControl: true,
-                        googNoiseSuppression: true,
-                        googHighpassFilter: true,
-                        googTypingNoiseDetection: true
-                    }
-                };
-            }
-
-            const rawStream = await originalGetUserMedia(constraints);
-            if (!rawStream.getAudioTracks().length) return rawStream;
-            const AudioCtx = window.AudioContext || window.webkitAudioContext;
-            if (!AudioCtx) return rawStream;
-
-            try {
-                const ctx = new AudioCtx();
-                const source = ctx.createMediaStreamSource(rawStream);
-
-                const highPass = ctx.createBiquadFilter();
-                highPass.type = 'highpass';
-                highPass.frequency.value = 120;
-                highPass.Q.value = 0.7;
-
-                const lowPass = ctx.createBiquadFilter();
-                lowPass.type = 'lowpass';
-                lowPass.frequency.value = 7500;
-                lowPass.Q.value = 0.7;
-
-                const vocalBoost = ctx.createBiquadFilter();
-                vocalBoost.type = 'peaking';
-                vocalBoost.frequency.value = 2500;
-                vocalBoost.gain.value = 3.5;
-                vocalBoost.Q.value = 1.2;
-
-                const gateGain = ctx.createGain();
-                gateGain.gain.value = 1.0;
-
-                const analyser = ctx.createAnalyser();
-                analyser.fftSize = 512;
-                analyser.smoothingTimeConstant = 0.4;
-                const dataArray = new Uint8Array(analyser.frequencyBinCount);
-
-                const compressor = ctx.createDynamicsCompressor();
-                compressor.threshold.value = -24;
-                compressor.knee.value = 12;
-                compressor.ratio.value = 4;
-                compressor.attack.value = 0.005;
-                compressor.release.value = 0.15;
-
-                source.connect(highPass);
-                highPass.connect(lowPass);
-                lowPass.connect(vocalBoost);
-                vocalBoost.connect(analyser);
-                vocalBoost.connect(gateGain);
-                gateGain.connect(compressor);
-
-                const destination = ctx.createMediaStreamDestination();
-                compressor.connect(destination);
-
-                const NOISE_THRESHOLD = 18;
-                let holdFrames = 0;
-                let active = true;
-
-                function processNoiseGate() {
-                    if (!active || rawStream.getAudioTracks()[0]?.readyState === 'ended') {
-                        ctx.close().catch(() => {});
-                        return;
-                    }
-
-                    analyser.getByteFrequencyData(dataArray);
-                    let vocalEnergy = 0;
-                    for (let i = 4; i < 45; i++) {
-                        vocalEnergy += dataArray[i];
-                    }
-                    const avgEnergy = vocalEnergy / 41;
-
-                    if (avgEnergy > NOISE_THRESHOLD) {
-                        holdFrames = 18;
-                        gateGain.gain.setTargetAtTime(1.0, ctx.currentTime, 0.015);
-                    } else if (holdFrames > 0) {
-                        holdFrames--;
-                    } else {
-                        gateGain.gain.setTargetAtTime(0.0, ctx.currentTime, 0.05);
-                    }
-
-                    requestAnimationFrame(processNoiseGate);
-                }
-                processNoiseGate();
-
-                rawStream.getAudioTracks().forEach(track => {
-                    track.addEventListener('ended', () => { active = false; });
-                });
-
-                const cleanStream = new MediaStream([
-                    ...rawStream.getVideoTracks(),
-                    ...destination.stream.getAudioTracks()
-                ]);
-
-                const origStop = cleanStream.getAudioTracks()[0].stop.bind(cleanStream.getAudioTracks()[0]);
-                cleanStream.getAudioTracks()[0].stop = () => {
-                    active = false;
-                    rawStream.getTracks().forEach(t => t.stop());
-                    origStop();
-                };
-
-                return cleanStream;
-            } catch (err) {
-                return rawStream;
-            }
-        };
-    })();
-    </script>
+    <link rel="icon" type="image/png" href="https://aurora-ai-ronz.vercel.app/favicon.png">
 
     <style>
         * {
@@ -286,72 +32,75 @@
             border: none;
             display: block;
         }
-        .seo-content-layer {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border: 0;
+        /* Fallback Permission Overlay in case Chrome blocks iframe auto-prompt */
+        #mic-permission-banner {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(20, 20, 25, 0.95);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 12px 20px;
+            border-radius: 12px;
+            color: #ffffff;
+            font-size: 14px;
+            display: none;
+            align-items: center;
+            gap: 12px;
+            z-index: 99999;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        #mic-permission-banner button {
+            background: #6366f1;
+            color: white;
+            border: none;
+            padding: 6px 14px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
         }
     </style>
 </head>
 <body>
 
-    <!-- Search Engine Semantic Layer -->
-    <main class="seo-content-layer" aria-hidden="false">
-        <header>
-            <h1>Aurora AI — Official Next-Gen AI Assistant by RonzLabs</h1>
-            <p>Access Aurora AI directly at aurora-ai-ronz.vercel.app. Built by RonzLabs for developers, students, writers, and creators seeking instant intelligence.</p>
-        </header>
-
-        <section>
-            <h2>Why Choose Aurora AI?</h2>
-            <ul>
-                <li><strong>Instant AI Chat:</strong> Natural, fast, and context-aware conversations powered by modern AI architecture.</li>
-                <li><strong>Coding & Debugging Partner:</strong> Generate clean HTML, CSS, JavaScript, Python, and Kotlin code in seconds.</li>
-                <li><strong>Zero Setup Web App:</strong> Works seamlessly on Android, iOS, Windows, and macOS without downloads.</li>
-                <li><strong>Built by RonzLabs:</strong> Designed with performance, privacy, and sleek dark-mode aesthetics in mind.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Frequently Asked Questions about Aurora AI</h2>
-            <article>
-                <h3>What is Aurora AI?</h3>
-                <p>Aurora AI is a smart web-based artificial intelligence assistant developed by RonzLabs for instant answers, programming help, and productivity.</p>
-            </article>
-            <article>
-                <h3>How do I use Aurora AI?</h3>
-                <p>Simply open aurora-ai-ronz.vercel.app in any modern web browser and start typing your prompt immediately.</p>
-            </article>
-        </section>
-
-        <footer>
-            <p>© 2026 RonzLabs. All rights reserved. Official Aurora AI Web Application.</p>
-        </footer>
-    </main>
-
-    <!-- Full-Screen App Viewport with Fixed Permissions -->
+    <!-- Full-Screen App Viewport with Explicit Permissions -->
     <iframe 
         id="aurora-frame"
         src="https://aurora-ai.ronzlabsofficial.workers.dev/" 
         title="Aurora AI — Official Smart AI Assistant Interface"
         loading="eager"
-        fetchpriority="high"
         allow="microphone *; camera *; geolocation *; clipboard-read; clipboard-write; fullscreen *"
         allowfullscreen>
     </iframe>
 
-    <noscript>
-        <div style="color: #ffffff; background: #000000; text-align: center; padding: 50px 20px;">
-            <h1>Aurora AI — Official Smart AI Assistant by RonzLabs</h1>
-            <p>JavaScript is required to run the Aurora AI interactive interface. Please enable JavaScript in your browser settings and reload the page.</p>
-        </div>
-    </noscript>
+    <!-- Chrome / Mobile Mic Fallback Banner -->
+    <div id="mic-permission-banner">
+        <span>Enable Microphone for Voice Chat</span>
+        <button onclick="requestMicAccess()">Allow Mic</button>
+    </div>
+
+    <script>
+        // Check and pre-warm microphone permissions on Chrome
+        async function requestMicAccess() {
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                stream.getTracks().forEach(track => track.stop());
+                document.getElementById('mic-permission-banner').style.display = 'none';
+            } catch (err) {
+                console.warn('Microphone permission denied or unavailable:', err);
+            }
+        }
+
+        // Trigger permission check on load if blocked
+        window.addEventListener('DOMContentLoaded', () => {
+            navigator.permissions?.query({ name: 'microphone' }).then(result => {
+                if (result.state === 'denied') {
+                    document.getElementById('mic-permission-banner').style.display = 'flex';
+                }
+            }).catch(() => {});
+        });
+    </script>
 
 </body>
 </html>
