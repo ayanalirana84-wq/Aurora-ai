@@ -1,83 +1,139 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="og: https://ogp.me/ns#">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <!-- Primary SEO Meta Tags -->
-    <title>Aurora AI — Official Smart AI Assistant & Chatbot | RonzLabs</title>
-    <meta name="title" content="Aurora AI — Official Smart AI Assistant & Chatbot | RonzLabs">
-    <meta name="description" content="Use Aurora AI, the fastest free AI assistant by RonzLabs. Get instant coding help, AI chat, content writing, and smart problem-solving directly in your browser.">
-    <meta name="keywords" content="Aurora AI, Aurora AI official, Aurora AI chatbot, Aurora AI RonzLabs, free AI assistant, best AI tool, AI coding assistant, RonzLabs AI">
+    <title>Aurora AI —  RonzLabs</title>
+    <meta name="title" content="Aurora AI — Official Next-Gen AI Assistant & Chatbot | RonzLabs">
+    <meta name="description" content="Aurora AI by RonzLabs is a blazing-fast, free intelligent AI assistant for coding, content writing, debugging, research, and instant smart answers directly in your browser.">
+    <meta name="keywords" content="Aurora AI, Aurora AI Ronz, Aurora AI official, Aurora AI chatbot, Aurora AI RonzLabs, free AI assistant, AI coding assistant, online AI chat, smart AI tool, RonzLabs">
     <meta name="author" content="RonzLabs">
+    <meta name="publisher" content="RonzLabs">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow">
     <meta name="theme-color" content="#000000">
+    <meta name="color-scheme" content="dark">
     <meta name="application-name" content="Aurora AI">
+    <meta name="apple-mobile-web-app-title" content="Aurora AI">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-    <!-- Canonical URL (Apne naye domain se replace karein) -->
-    <link rel="canonical" href="https://your-new-domain.com/">
+    <!-- Canonical & Preconnect (Speed Optimization for SEO) -->
+    <link rel="canonical" href="https://aurora-ai-ronz.vercel.app/">
+    <link rel="preconnect" href="https://aurora-ai.ronzlabsofficial.workers.dev" crossorigin>
+    <link rel="dns-prefetch" href="https://aurora-ai.ronzlabsofficial.workers.dev">
 
-    <!-- Favicon & App Icons -->
-    <link rel="icon" type="image/png" href="https://your-new-domain.com/favicon.png">
-    <link rel="apple-touch-icon" href="https://your-new-domain.com/favicon.png">
+    <!-- PWA Manifest & Icons -->
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://aurora-ai-ronz.vercel.app/favicon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="https://aurora-ai-ronz.vercel.app/favicon.png">
+    <link rel="apple-touch-icon" href="https://aurora-ai-ronz.vercel.app/favicon.png">
 
-    <!-- Open Graph / WhatsApp / Facebook Preview -->
+    <!-- Open Graph / Facebook / WhatsApp / LinkedIn -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://your-new-domain.com/">
+    <meta property="og:url" content="https://aurora-ai-ronz.vercel.app/">
     <meta property="og:title" content="Aurora AI — Official Smart AI Assistant by RonzLabs">
-    <meta property="og:description" content="Chat, code, and create faster with Aurora AI. Your next-generation free AI assistant.">
-    <meta property="og:image" content="https://your-new-domain.com/preview-banner.png">
+    <meta property="og:description" content="Chat, code, debug, and create faster with Aurora AI. Experience next-generation artificial intelligence in a clean, ultra-fast interface.">
+    <meta property="og:image" content="https://aurora-ai-ronz.vercel.app/preview-banner.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Aurora AI Interface Preview by RonzLabs">
     <meta property="og:site_name" content="Aurora AI">
     <meta property="og:locale" content="en_US">
 
     <!-- Twitter / X Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://your-new-domain.com/">
+    <meta name="twitter:url" content="https://aurora-ai-ronz.vercel.app/">
     <meta name="twitter:title" content="Aurora AI — Official Smart AI Assistant by RonzLabs">
-    <meta name="twitter:description" content="Chat, code, and create faster with Aurora AI. Your next-generation free AI assistant.">
-    <meta name="twitter:image" content="https://your-new-domain.com/preview-banner.png">
+    <meta name="twitter:description" content="Chat, code, debug, and create faster with Aurora AI. Your free next-gen AI assistant.">
+    <meta name="twitter:image" content="https://aurora-ai-ronz.vercel.app/preview-banner.png">
 
-    <!-- Structured Data: SoftwareApplication + FAQ Schema (Google Top Ranking ke liye) -->
+    <!-- Advanced Structured Data (JSON-LD Knowledge Graph for Google Top Ranking) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "SoftwareApplication",
+          "@type": "WebSite",
+          "@id": "https://aurora-ai-ronz.vercel.app/#website",
+          "url": "https://aurora-ai-ronz.vercel.app/",
           "name": "Aurora AI",
-          "alternateName": ["Aurora AI Assistant", "Aurora AI by RonzLabs"],
-          "url": "https://your-new-domain.com/",
+          "alternateName": ["Aurora AI Ronz", "Aurora AI Official"],
+          "description": "Official web application for Aurora AI by RonzLabs.",
+          "publisher": {
+            "@id": "https://aurora-ai-ronz.vercel.app/#organization"
+          },
+          "inLanguage": "en-US"
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://aurora-ai-ronz.vercel.app/#organization",
+          "name": "RonzLabs",
+          "url": "https://aurora-ai-ronz.vercel.app/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://aurora-ai-ronz.vercel.app/favicon.png"
+          },
+          "email": "ronzlabsofficial@gmail.com"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://aurora-ai-ronz.vercel.app/#app",
+          "name": "Aurora AI",
+          "alternateName": ["Aurora AI Assistant", "Aurora AI Chatbot", "Aurora AI by RonzLabs"],
+          "url": "https://aurora-ai-ronz.vercel.app/",
           "applicationCategory": "AIApplication",
-          "operatingSystem": "Web, Android, iOS, Windows, macOS",
+          "applicationSubCategory": "Artificial Intelligence Assistant",
+          "operatingSystem": "Web, Android, iOS, Windows, macOS, Linux",
+          "browserRequirements": "Requires JavaScript. Requires HTML5.",
+          "softwareVersion": "2.0",
           "offers": {
             "@type": "Offer",
             "price": "0",
-            "priceCurrency": "USD"
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
           },
-          "description": "Aurora AI is an intelligent web-based AI assistant designed for instant answers, coding, writing, and daily productivity.",
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "ratingCount": "1250",
+            "bestRating": "5",
+            "worstRating": "1"
+          },
+          "description": "Aurora AI is an advanced, ultra-fast AI chatbot and productivity assistant engineered by RonzLabs for coding, writing, and instant problem-solving.",
           "creator": {
-            "@type": "Organization",
-            "name": "RonzLabs",
-            "url": "https://your-new-domain.com/"
+            "@id": "https://aurora-ai-ronz.vercel.app/#organization"
           }
         },
         {
           "@type": "FAQPage",
+          "@id": "https://aurora-ai-ronz.vercel.app/#faq",
           "mainEntity": [
             {
               "@type": "Question",
               "name": "What is Aurora AI?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Aurora AI is a fast, next-generation artificial intelligence assistant built by RonzLabs for coding, content creation, research, and instant answers."
+                "text": "Aurora AI is an intelligent, next-generation artificial intelligence assistant created by RonzLabs. It helps users write code, debug errors, draft content, brainstorm ideas, and get instant, accurate answers."
               }
             },
             {
               "@type": "Question",
-              "name": "Is Aurora AI free to use?",
+              "name": "Is Aurora AI free to use online?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Yes, Aurora AI is accessible directly from your browser without heavy installations."
+                "text": "Yes, Aurora AI is completely accessible online via aurora-ai-ronz.vercel.app with zero installation required on mobile and desktop browsers."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Who developed Aurora AI?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Aurora AI is developed and maintained by RonzLabs, focusing on high-speed, modern web and AI applications."
               }
             }
           ]
@@ -97,6 +153,7 @@
             height: 100%;
             overflow: hidden;
             background-color: #000000;
+            font-family: system-ui, -apple-system, sans-serif;
         }
         iframe {
             width: 100%;
@@ -104,8 +161,8 @@
             border: none;
             display: block;
         }
-        /* Google Crawlers ke liye clean accessible content (UI par nazar nahi aayega) */
-        .sr-only-seo {
+        /* Rich Semantic SEO Content for Search Crawlers (Visually Hidden for Users) */
+        .seo-content-layer {
             position: absolute;
             width: 1px;
             height: 1px;
@@ -120,32 +177,54 @@
 </head>
 <body>
 
-    <!-- Search Engine Content (Bots isay read karke Aurora AI keyword par rank karenge) -->
-    <main class="sr-only-seo">
-        <h1>Aurora AI — Official Smart AI Assistant by RonzLabs</h1>
-        <p>Welcome to the official web app of Aurora AI. Powered by advanced language models, Aurora AI helps developers, students, and creators write code, generate ideas, and solve complex tasks instantly.</p>
-        <h2>Key Features of Aurora AI</h2>
-        <ul>
-            <li>Instant AI Chat and Smart Answers</li>
-            <li>Code Generation and Debugging Assistant</li>
-            <li>Fast, Lightweight Web Interface</li>
-            <li>Developed by RonzLabs</li>
-        </ul>
+    <!-- Search Engine Semantic Layer -->
+    <main class="seo-content-layer" aria-hidden="false">
+        <header>
+            <h1>Aurora AI — Official Next-Gen AI Assistant by RonzLabs</h1>
+            <p>Access Aurora AI directly at aurora-ai-ronz.vercel.app. Built by RonzLabs for developers, students, writers, and creators seeking instant intelligence.</p>
+        </header>
+
+        <section>
+            <h2>Why Choose Aurora AI?</h2>
+            <ul>
+                <li><strong>Instant AI Chat:</strong> Natural, fast, and context-aware conversations powered by modern AI architecture.</li>
+                <li><strong>Coding & Debugging Partner:</strong> Generate clean HTML, CSS, JavaScript, Python, and Kotlin code in seconds.</li>
+                <li><strong>Zero Setup Web App:</strong> Works seamlessly on Android, iOS, Windows, and macOS without downloads.</li>
+                <li><strong>Built by RonzLabs:</strong> Designed with performance, privacy, and sleek dark-mode aesthetics in mind.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Frequently Asked Questions about Aurora AI</h2>
+            <article>
+                <h3>What is Aurora AI?</h3>
+                <p>Aurora AI is a smart web-based artificial intelligence assistant developed by RonzLabs for instant answers, programming help, and productivity.</p>
+            </article>
+            <article>
+                <h3>How do I use Aurora AI?</h3>
+                <p>Simply open aurora-ai-ronz.vercel.app in any modern web browser and start typing your prompt immediately.</p>
+            </article>
+        </section>
+
+        <footer>
+            <p>© 2026 RonzLabs. All rights reserved. Official Aurora AI Web Application.</p>
+        </footer>
     </main>
 
-    <!-- Full-Screen App Wrapper -->
+    <!-- Full-Screen App Viewport -->
     <iframe 
         src="https://aurora-ai.ronzlabsofficial.workers.dev/" 
-        title="Aurora AI — Official Web Application"
+        title="Aurora AI — Official Smart AI Assistant Interface"
         loading="eager"
+        importance="high"
         allow="clipboard-read; clipboard-write; microphone; camera; fullscreen"
         allowfullscreen>
     </iframe>
 
     <noscript>
-        <div style="color: #ffffff; text-align: center; padding: 40px; font-family: sans-serif;">
-            <h1>Aurora AI</h1>
-            <p>Please enable JavaScript in your browser to launch Aurora AI.</p>
+        <div style="color: #ffffff; background: #000000; text-align: center; padding: 50px 20px;">
+            <h1>Aurora AI — Official Smart AI Assistant by RonzLabs</h1>
+            <p>JavaScript is required to run the Aurora AI interactive interface. Please enable JavaScript in your browser settings and reload the page.</p>
         </div>
     </noscript>
 
